@@ -25,7 +25,7 @@ END_MESSAGE_MAP()
 
 CLeftView::CLeftView()
 {
-	// TODO: add construction code here
+   // TODO: add construction code here
 }
 
 CLeftView::~CLeftView()
@@ -34,17 +34,17 @@ CLeftView::~CLeftView()
 
 BOOL CLeftView::PreCreateWindow(CREATESTRUCT& cs)
 {
-	// TODO: Modify the Window class or styles here by modifying the CREATESTRUCT cs
+   // TODO: Modify the Window class or styles here by modifying the CREATESTRUCT cs
 
-	return CTreeView::PreCreateWindow(cs);
+   return CTreeView::PreCreateWindow(cs);
 }
 
 void CLeftView::OnInitialUpdate()
 {
-	CTreeView::OnInitialUpdate();
+   CTreeView::OnInitialUpdate();
 
-	// TODO: You may populate your TreeView with items by directly accessing
-	//  its tree control through a call to GetTreeCtrl().
+   // TODO: You may populate your TreeView with items by directly accessing
+   //  its tree control through a call to GetTreeCtrl().
 }
 
 
@@ -53,20 +53,20 @@ void CLeftView::OnInitialUpdate()
 #ifdef _DEBUG
 void CLeftView::AssertValid() const
 {
-	CTreeView::AssertValid();
+   CTreeView::AssertValid();
 }
 
 void CLeftView::Dump(CDumpContext& dc) const
 {
-	CTreeView::Dump(dc);
+   CTreeView::Dump(dc);
 }
 
 COpenGLDockableOrdinaryBrowseDoc* CLeftView::GetDocument() // non-debug version is inline
 {
-	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(COpenGLDockableOrdinaryBrowseDoc)));
-	return (COpenGLDockableOrdinaryBrowseDoc*)m_pDocument;
+   ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(COpenGLDockableOrdinaryBrowseDoc)));
+   return (COpenGLDockableOrdinaryBrowseDoc*)m_pDocument;
 }
 #endif //_DEBUG
 
 
-// CLeftView message handlers
+   // CLeftView message handlers

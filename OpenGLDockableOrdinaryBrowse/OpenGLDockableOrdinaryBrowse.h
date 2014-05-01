@@ -4,7 +4,7 @@
 #pragma once
 
 #ifndef __AFXWIN_H__
-	#error "include 'stdafx.h' before including this file for PCH"
+#error "include 'stdafx.h' before including this file for PCH"
 #endif
 
 #include "resource.h"       // main symbols
@@ -17,17 +17,17 @@
 class COpenGLDockableOrdinaryBrowseApp : public CWinApp
 {
 public:
-	COpenGLDockableOrdinaryBrowseApp();
+   COpenGLDockableOrdinaryBrowseApp();
 
 
-// Overrides
+   // Overrides
 public:
-	virtual BOOL InitInstance();
-	virtual int ExitInstance();
+   virtual BOOL InitInstance();
+   virtual int ExitInstance();
 
-// Implementation
-	afx_msg void OnAppAbout();
-	DECLARE_MESSAGE_MAP()
+   // Implementation
+   afx_msg void OnAppAbout();
+   DECLARE_MESSAGE_MAP()
 };
 
 extern COpenGLDockableOrdinaryBrowseApp theApp;

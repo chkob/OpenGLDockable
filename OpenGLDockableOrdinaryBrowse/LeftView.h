@@ -10,39 +10,39 @@ class COpenGLDockableOrdinaryBrowseDoc;
 class CLeftView : public CTreeView
 {
 protected: // create from serialization only
-	CLeftView();
-	DECLARE_DYNCREATE(CLeftView)
+   CLeftView();
+   DECLARE_DYNCREATE(CLeftView)
 
-// Attributes
+   // Attributes
 public:
-	COpenGLDockableOrdinaryBrowseDoc* GetDocument();
+   COpenGLDockableOrdinaryBrowseDoc* GetDocument();
 
-// Operations
+   // Operations
 public:
 
-// Overrides
-	public:
-	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
-	protected:
-	virtual void OnInitialUpdate(); // called first time after construct
-
-// Implementation
+   // Overrides
 public:
-	virtual ~CLeftView();
+   virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+protected:
+   virtual void OnInitialUpdate(); // called first time after construct
+
+   // Implementation
+public:
+   virtual ~CLeftView();
 #ifdef _DEBUG
-	virtual void AssertValid() const;
-	virtual void Dump(CDumpContext& dc) const;
+   virtual void AssertValid() const;
+   virtual void Dump(CDumpContext& dc) const;
 #endif
 
 protected:
 
-// Generated message map functions
+   // Generated message map functions
 protected:
-	DECLARE_MESSAGE_MAP()
+   DECLARE_MESSAGE_MAP()
 };
 
 #ifndef _DEBUG  // debug version in LeftView.cpp
 inline COpenGLDockableOrdinaryBrowseDoc* CLeftView::GetDocument()
-   { return reinterpret_cast<COpenGLDockableOrdinaryBrowseDoc*>(m_pDocument); }
+{ return reinterpret_cast<COpenGLDockableOrdinaryBrowseDoc*>(m_pDocument); }
 #endif
 

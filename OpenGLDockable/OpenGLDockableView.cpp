@@ -22,19 +22,19 @@
 IMPLEMENT_DYNCREATE(COpenGLDockableView, CView)
 
 BEGIN_MESSAGE_MAP(COpenGLDockableView, CView)
-	// Standard printing commands
-	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
-	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
-	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &COpenGLDockableView::OnFilePrintPreview)
-	ON_WM_CONTEXTMENU()
-	ON_WM_RBUTTONUP()
+   // Standard printing commands
+   ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
+   ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
+   ON_COMMAND(ID_FILE_PRINT_PREVIEW, &COpenGLDockableView::OnFilePrintPreview)
+   ON_WM_CONTEXTMENU()
+   ON_WM_RBUTTONUP()
 END_MESSAGE_MAP()
 
 // COpenGLDockableView construction/destruction
 
 COpenGLDockableView::COpenGLDockableView()
 {
-	// TODO: add construction code here
+   // TODO: add construction code here
 
 }
 
@@ -44,22 +44,22 @@ COpenGLDockableView::~COpenGLDockableView()
 
 BOOL COpenGLDockableView::PreCreateWindow(CREATESTRUCT& cs)
 {
-	// TODO: Modify the Window class or styles here by modifying
-	//  the CREATESTRUCT cs
+   // TODO: Modify the Window class or styles here by modifying
+   //  the CREATESTRUCT cs
 
-	return CView::PreCreateWindow(cs);
+   return CView::PreCreateWindow(cs);
 }
 
 // COpenGLDockableView drawing
 
 void COpenGLDockableView::OnDraw(CDC* /*pDC*/)
 {
-	COpenGLDockableDoc* pDoc = GetDocument();
-	ASSERT_VALID(pDoc);
-	if (!pDoc)
-		return;
+   COpenGLDockableDoc* pDoc = GetDocument();
+   ASSERT_VALID(pDoc);
+   if (!pDoc)
+      return;
 
-	// TODO: add draw code for native data here
+   // TODO: add draw code for native data here
 }
 
 
@@ -69,36 +69,36 @@ void COpenGLDockableView::OnDraw(CDC* /*pDC*/)
 void COpenGLDockableView::OnFilePrintPreview()
 {
 #ifndef SHARED_HANDLERS
-	AFXPrintPreview(this);
+   AFXPrintPreview(this);
 #endif
 }
 
 BOOL COpenGLDockableView::OnPreparePrinting(CPrintInfo* pInfo)
 {
-	// default preparation
-	return DoPreparePrinting(pInfo);
+   // default preparation
+   return DoPreparePrinting(pInfo);
 }
 
 void COpenGLDockableView::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
-	// TODO: add extra initialization before printing
+   // TODO: add extra initialization before printing
 }
 
 void COpenGLDockableView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
-	// TODO: add cleanup after printing
+   // TODO: add cleanup after printing
 }
 
 void COpenGLDockableView::OnRButtonUp(UINT /* nFlags */, CPoint point)
 {
-	ClientToScreen(&point);
-	OnContextMenu(this, point);
+   ClientToScreen(&point);
+   OnContextMenu(this, point);
 }
 
 void COpenGLDockableView::OnContextMenu(CWnd* /* pWnd */, CPoint point)
 {
 #ifndef SHARED_HANDLERS
-	theApp.GetContextMenuManager()->ShowPopupMenu(IDR_POPUP_EDIT, point.x, point.y, this, TRUE);
+   theApp.GetContextMenuManager()->ShowPopupMenu(IDR_POPUP_EDIT, point.x, point.y, this, TRUE);
 #endif
 }
 
@@ -108,18 +108,18 @@ void COpenGLDockableView::OnContextMenu(CWnd* /* pWnd */, CPoint point)
 #ifdef _DEBUG
 void COpenGLDockableView::AssertValid() const
 {
-	CView::AssertValid();
+   CView::AssertValid();
 }
 
 void COpenGLDockableView::Dump(CDumpContext& dc) const
 {
-	CView::Dump(dc);
+   CView::Dump(dc);
 }
 
 COpenGLDockableDoc* COpenGLDockableView::GetDocument() const // non-debug version is inline
 {
-	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(COpenGLDockableDoc)));
-	return (COpenGLDockableDoc*)m_pDocument;
+   ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(COpenGLDockableDoc)));
+   return (COpenGLDockableDoc*)m_pDocument;
 }
 #endif //_DEBUG
 

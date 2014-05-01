@@ -22,17 +22,17 @@
 IMPLEMENT_DYNCREATE(COpenGLDockableOrdinaryStyleView, CView)
 
 BEGIN_MESSAGE_MAP(COpenGLDockableOrdinaryStyleView, CView)
-	// Standard printing commands
-	ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
-	ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
-	ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CView::OnFilePrintPreview)
+   // Standard printing commands
+   ON_COMMAND(ID_FILE_PRINT, &CView::OnFilePrint)
+   ON_COMMAND(ID_FILE_PRINT_DIRECT, &CView::OnFilePrint)
+   ON_COMMAND(ID_FILE_PRINT_PREVIEW, &CView::OnFilePrintPreview)
 END_MESSAGE_MAP()
 
 // COpenGLDockableOrdinaryStyleView construction/destruction
 
 COpenGLDockableOrdinaryStyleView::COpenGLDockableOrdinaryStyleView()
 {
-	// TODO: add construction code here
+   // TODO: add construction code here
 
 }
 
@@ -42,22 +42,22 @@ COpenGLDockableOrdinaryStyleView::~COpenGLDockableOrdinaryStyleView()
 
 BOOL COpenGLDockableOrdinaryStyleView::PreCreateWindow(CREATESTRUCT& cs)
 {
-	// TODO: Modify the Window class or styles here by modifying
-	//  the CREATESTRUCT cs
+   // TODO: Modify the Window class or styles here by modifying
+   //  the CREATESTRUCT cs
 
-	return CView::PreCreateWindow(cs);
+   return CView::PreCreateWindow(cs);
 }
 
 // COpenGLDockableOrdinaryStyleView drawing
 
 void COpenGLDockableOrdinaryStyleView::OnDraw(CDC* /*pDC*/)
 {
-	COpenGLDockableOrdinaryStyleDoc* pDoc = GetDocument();
-	ASSERT_VALID(pDoc);
-	if (!pDoc)
-		return;
+   COpenGLDockableOrdinaryStyleDoc* pDoc = GetDocument();
+   ASSERT_VALID(pDoc);
+   if (!pDoc)
+      return;
 
-	// TODO: add draw code for native data here
+   // TODO: add draw code for native data here
 }
 
 
@@ -65,18 +65,18 @@ void COpenGLDockableOrdinaryStyleView::OnDraw(CDC* /*pDC*/)
 
 BOOL COpenGLDockableOrdinaryStyleView::OnPreparePrinting(CPrintInfo* pInfo)
 {
-	// default preparation
-	return DoPreparePrinting(pInfo);
+   // default preparation
+   return DoPreparePrinting(pInfo);
 }
 
 void COpenGLDockableOrdinaryStyleView::OnBeginPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
-	// TODO: add extra initialization before printing
+   // TODO: add extra initialization before printing
 }
 
 void COpenGLDockableOrdinaryStyleView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /*pInfo*/)
 {
-	// TODO: add cleanup after printing
+   // TODO: add cleanup after printing
 }
 
 
@@ -85,18 +85,18 @@ void COpenGLDockableOrdinaryStyleView::OnEndPrinting(CDC* /*pDC*/, CPrintInfo* /
 #ifdef _DEBUG
 void COpenGLDockableOrdinaryStyleView::AssertValid() const
 {
-	CView::AssertValid();
+   CView::AssertValid();
 }
 
 void COpenGLDockableOrdinaryStyleView::Dump(CDumpContext& dc) const
 {
-	CView::Dump(dc);
+   CView::Dump(dc);
 }
 
 COpenGLDockableOrdinaryStyleDoc* COpenGLDockableOrdinaryStyleView::GetDocument() const // non-debug version is inline
 {
-	ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(COpenGLDockableOrdinaryStyleDoc)));
-	return (COpenGLDockableOrdinaryStyleDoc*)m_pDocument;
+   ASSERT(m_pDocument->IsKindOf(RUNTIME_CLASS(COpenGLDockableOrdinaryStyleDoc)));
+   return (COpenGLDockableOrdinaryStyleDoc*)m_pDocument;
 }
 #endif //_DEBUG
 

@@ -10,52 +10,52 @@
 
 class CMainFrame : public CFrameWndEx
 {
-	
+
 protected: // create from serialization only
-	CMainFrame();
-	DECLARE_DYNCREATE(CMainFrame)
+   CMainFrame();
+   DECLARE_DYNCREATE(CMainFrame)
 
-// Attributes
+   // Attributes
 public:
 
-// Operations
+   // Operations
 public:
 
-// Overrides
+   // Overrides
 public:
-	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
-	virtual BOOL LoadFrame(UINT nIDResource, DWORD dwDefaultStyle = WS_OVERLAPPEDWINDOW | FWS_ADDTOTITLE, CWnd* pParentWnd = NULL, CCreateContext* pContext = NULL);
+   virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+   virtual BOOL LoadFrame(UINT nIDResource, DWORD dwDefaultStyle = WS_OVERLAPPEDWINDOW | FWS_ADDTOTITLE, CWnd* pParentWnd = NULL, CCreateContext* pContext = NULL);
 
-// Implementation
+   // Implementation
 public:
-	virtual ~CMainFrame();
+   virtual ~CMainFrame();
 #ifdef _DEBUG
-	virtual void AssertValid() const;
-	virtual void Dump(CDumpContext& dc) const;
+   virtual void AssertValid() const;
+   virtual void Dump(CDumpContext& dc) const;
 #endif
 
 protected:  // control bar embedded members
-	CMFCMenuBar       m_wndMenuBar;
-	CMFCToolBar       m_wndToolBar;
-	CMFCStatusBar     m_wndStatusBar;
-	CMFCToolBarImages m_UserImages;
-	CFileView         m_wndFileView;
-	CClassView        m_wndClassView;
-	COutputWnd        m_wndOutput;
-	CPropertiesWnd    m_wndProperties;
+   CMFCMenuBar       m_wndMenuBar;
+   CMFCToolBar       m_wndToolBar;
+   CMFCStatusBar     m_wndStatusBar;
+   CMFCToolBarImages m_UserImages;
+   CFileView         m_wndFileView;
+   CClassView        m_wndClassView;
+   COutputWnd        m_wndOutput;
+   CPropertiesWnd    m_wndProperties;
 
-// Generated message map functions
+   // Generated message map functions
 protected:
-	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
-	afx_msg void OnViewCustomize();
-	afx_msg LRESULT OnToolbarCreateNew(WPARAM wp, LPARAM lp);
-	afx_msg void OnApplicationLook(UINT id);
-	afx_msg void OnUpdateApplicationLook(CCmdUI* pCmdUI);
-	afx_msg void OnSettingChange(UINT uFlags, LPCTSTR lpszSection);
-	DECLARE_MESSAGE_MAP()
+   afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+   afx_msg void OnViewCustomize();
+   afx_msg LRESULT OnToolbarCreateNew(WPARAM wp, LPARAM lp);
+   afx_msg void OnApplicationLook(UINT id);
+   afx_msg void OnUpdateApplicationLook(CCmdUI* pCmdUI);
+   afx_msg void OnSettingChange(UINT uFlags, LPCTSTR lpszSection);
+   DECLARE_MESSAGE_MAP()
 
-	BOOL CreateDockingWindows();
-	void SetDockingWindowIcons(BOOL bHiColorIcons);
+   BOOL CreateDockingWindows();
+   void SetDockingWindowIcons(BOOL bHiColorIcons);
 };
 
 
